@@ -1,9 +1,11 @@
 package com.Capgemini.Spring.Boot.Assignment3.Models;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+@Entity
 public class Message {
 
     @Id
@@ -11,7 +13,6 @@ public class Message {
     private  Long id;
     @ManyToOne
     private Account account;
-    private String content;
     @ManyToOne
     private Topic topic;
 
@@ -24,11 +25,4 @@ public class Message {
     }
 
 
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
 }
